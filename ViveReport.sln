@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViveReport", "src/vive_report.csproj", "{069A6669-2675-4B2B-8A6B-A156C343258E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{069A6669-2675-4B2B-8A6B-A156C343258E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069A6669-2675-4B2B-8A6B-A156C343258E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069A6669-2675-4B2B-8A6B-A156C343258E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069A6669-2675-4B2B-8A6B-A156C343258E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D43BCC8-0911-4ECE-AB14-1CC367C37F20}
+	EndGlobalSection
+EndGlobal
