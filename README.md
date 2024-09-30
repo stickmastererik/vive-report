@@ -7,7 +7,7 @@ Every major mod menu that Gorilla Tag modders use include an "anti-report" that 
 This has never been avaliable to SteamVR users, and it is super easy to implement in a small mod. This mod provides the same functionality and is completely legal and cannot get you banned.
 
 ## Flaws
-- **Oculus users cannot use the mod.** The Oculus button is the right menu button on Rift and Quest, so the mod will not work for Quest / Rift users.
+- ~~Oculus users cannot use the mod.~~ This issue should be fixed with the use of ``ControllerInputPoller`` in the mod.
 - **Some mod menus are able to detect Oculus Report**. It is not very popular, but some mod menus have the capability to do it.
 
 ## Installation
