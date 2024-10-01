@@ -1,3 +1,8 @@
+> [!NOTE]
+> This is a patch branch. This is not the main branch, and will not work as intended. See the ``main`` branch.
+>
+> This patch branch will fix [#2](https://github.com/andrewpcvr/vive-report/issues/2): **The game will show only a black screen after using the menu in a lobby.**
+
 # vive-report (Oculus Report Menu for SteamVR)
 This basic mod lets you access the Oculus Report Menu on SteamVR. It does this using your right controller menu button, so it should not have any issues with built-in Gorilla Tag keybinds.
 
@@ -13,6 +18,6 @@ Press your secondary button on the right controller.
 Look for the latest release, and download ``ViveReport.dll``. Drag this into your Plugins folder,launch a game and press your right controller's menu button. The report menu should now show up and work as it would on a Quest.
 
 ## Flaws
-- **The game will show only a black screen after using the menu in a lobby.** After closing the menu, your world will disappear and you will not be able to see it. It will return to normal once you restart the game.
+- The game will show only a black screen after using the menu in a lobby.** After closing the menu, your world will disappear and you will not be able to see it. It will return to normal once you restart the game.
 - ~~Oculus users cannot use the mod.~~ This issue should be fixed with the use of ``ControllerInputPoller`` in the mod.
 - **Some mod menus are able to detect Oculus Report**. It is not very popular, but some mod menus have the capability to do it.
