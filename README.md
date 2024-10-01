@@ -7,12 +7,7 @@ Every major mod menu that Gorilla Tag modders use include an "anti-report" that 
 This has never been avaliable to SteamVR users, and it is super easy to implement in a small mod. This mod provides the same functionality and is completely legal and cannot get you banned.
 
 ## Usage
-Press your alternate menu button on your controller.
-
-> ### HTC Vive
-> ![Vive controllers](img/vive_controllers.webp)
-> For HTC Vive, press the button labelled 3 on the right controller to view the Oculus Report menu.
-
+Press your secondary button on the right controller.
 
 ## Installation
 Look for the latest release, and download ``ViveReport.dll``. Drag this into your Plugins folder,launch a game and press your right controller's menu button. The report menu should now show up and work as it would on a Quest.
