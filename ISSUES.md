@@ -7,7 +7,15 @@ This bug is with exiting the Report Menu. After pressing X to quit the menu, it 
 - Collisions still occur, and you can hear players and sounds from footsteps.
 
 ## Solution Ideas:
-[``andrewpcvr``](https://github.com/andrewpcvr): Virtual leaderboard that appears on spectator screen, or manually reload the map when the report menu is closed
+- [``andrewpcvr``](https://github.com/andrewpcvr): Virtual leaderboard that appears on spectator screen, or manually reload the map when the report menu is closed
+
+## Accepted Solution
+- [``andrewpcvr``](https://github.com/andrewpcvr): Virtual leaderboard that appears on spectator screen, or manually reload the map when the report menu is closed
+
+## Bug Status
+``Not Completed (Robot@9:15 AM)``
+- Beginning of development: Scheduled for ``6 Oct 2024 12:00 PM``
+- Ending of development: Scheduled for ``10 Oct 2024 12:00 PM``
 
 # Not Important: *Rebind button to a sandwich button* [#1](https://github.com/andrewpcvr/vive-report/issues/1)
 Quality of life update to use a non-essential button to access the report menu.
