@@ -1,8 +1,3 @@
-> [!NOTE]
-> This is a patch branch. This is not the main branch, and will not work as intended. See the ``main`` branch.
->
-> This patch branch will fix [#2](https://github.com/andrewpcvr/vive-report/issues/2): **The game will show only a black screen after using the menu in a lobby.**
-
 # vive-report (Oculus Report Menu for SteamVR)
 This basic mod lets you access the Oculus Report Menu on SteamVR. It does this using your right controller menu button, so it should not have any issues with built-in Gorilla Tag keybinds.
 
