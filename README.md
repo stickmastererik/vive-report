@@ -13,7 +13,7 @@ Press your secondary button on the right controller.
 Look for the latest release, and download ``ViveReport.dll``. Drag this into your Plugins folder,launch a game and press your right controller's menu button. The report menu should now show up and work as it would on a Quest.
 
 ## Flaws
-- This has been moved to [``ISSUES.md``](/issues.md).
+- This has been moved to [``ISSUES.md``](/ISSUES.md).
 
 ## License
 vive-report is licensed under the GNU General Public License V3.
