@@ -6,11 +6,12 @@ This bug is with exiting the Report Menu. After pressing X to quit the menu, it 
 - Only way to patch is to restart your game
 - Collisions still occur, and you can hear players and sounds from footsteps.
 
-## Solution Ideas:
-[``octomonke``](https://github.com/andrewpcvr): Virtual leaderboard that appears on spectator screen, or manually reload the map when the report menu is closed
+## Exploration Patches
+### Will Work (Proven by other mods):
+Providing a leaderboard that will pop up can be less detectable than the regular Oculus Report Menu. This may mean making a smaller dumbed-down ``BananaOS`` fork, and just using the leaderboard on there to report.
 
-## Exploration
-This method was found by ``octomonke`` and will figure out what map the player is in over the network
+### In Experimentation
+This method will figure out what map the player is in over the network.
 ```cs
 string gamemode = PhotonNetworkController.Instance.currentJoinTrigger.networkZone;
 
@@ -47,10 +48,3 @@ if (gamemode == "caves")
     // We are in caves
 }
 ```
-
-# Not Important: *Rebind button to a sandwich button* [#1](https://github.com/andrewpcvr/vive-report/issues/1)
-Quality of life update to use a non-essential button to access the report menu.
-Instead of pressing a secondary button, you can press the right sandwich button found on most SteamVR controllers.
-
-## Solution Ideas:
-[``octomonke``](https://github.com/andrewpcvr): Rebind using ``ControllerInputPoller``
