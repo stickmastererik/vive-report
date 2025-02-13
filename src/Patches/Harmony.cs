@@ -13,7 +13,7 @@ namespace ViveReport
         private static Harmony instance;
 
         public static bool IsPatched { get; private set; }
-        public const string InstanceId = "org.andrewpcvr.gorillatag.oculusreportmenu";
+        public const string InstanceId = "org.oatsalmon.gorillatag.oculusreportmenu";
 
         internal static void ApplyHarmonyPatches()
         {
