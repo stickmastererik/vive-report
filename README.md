@@ -11,3 +11,12 @@ Press your secondary button on the left controller to open the menu. Close it wi
 
 ## Installation
 Look for the latest release, and download ``OculusReportMenu.dll``. Drag this into your plugins folder, launch a game and press your left controller's secondary button. The report menu should now show up and work as it would on a Quest.
+
+# Headsets
+| Headset | Keybind |
+|---------|---------|
+| Oculus Quest 1/2/3S/3/Pro | Left Controller "Y" |
+| Oculus Rift (Touch Controllers) | Left Controller "Y" |
+| Oculus Rift S | Left Controller "Y" |
+| HP Reverb G2 | Left Controller "Y" |
+| Valve Index | Left Controller "Y" |
