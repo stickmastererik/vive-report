@@ -4,17 +4,18 @@ using System.Reflection;
 using UnityEngine;
 
 namespace ViveReport {
-    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "Vive Report Menu", "1.0.0")]
+    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "Oculus Report Menu", "1.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         GorillaMetaReport gr = GameObject.Find("Miscellaneous Scripts").transform.Find("MetaReporting").GetComponent<GorillaMetaReport>();
         static bool MenuOpen = false;
+        static bool ModEnabled = true;
 
         public void Update()
         {
             if (ControllerInputPoller.instance.leftControllerSecondaryButton)
             {
-                if (!MenuOpen)
+                if (!MenuOpen && ModEnabled)
                 {
                     Menus.OculusReportMenu();
                     MenuOpen = true;
@@ -30,12 +31,14 @@ namespace ViveReport {
             }
         }
 
-        public void OnEnable() { HarmonyPatches.ApplyHarmonyPatches(); }
-        public void OnDisable() { HarmonyPatches.RemoveHarmonyPatches(); }
-
-        public void OnGameInitialized(object sender, EventArgs e)
-        {
-            UnityEngine.Debug.Log("ViveReport initializing");
+        public void OnEnable() {
+            HarmonyPatches.ApplyHarmonyPatches();
+            ModEnabled = true;
+        }
+        
+        public void OnDisable() {
+            HarmonyPatches.RemoveHarmonyPatches();
+            ModEnabled = false;
         }
     }
 }
