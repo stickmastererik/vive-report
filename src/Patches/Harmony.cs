@@ -2,7 +2,7 @@ using HarmonyLib;
 using System;
 using System.Reflection;
 
-namespace ViveReport
+namespace OculusReportMenu
 {
     /// <summary>
     /// This class handles applying harmony patches to the game.

@@ -31,5 +31,8 @@
 		<Reference Include="UnityEngine">
 			<HintPath>$(GameAssemblyPath)\UnityEngine.dll</HintPath>
 		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+		  <HintPath>..\..\..\..\..\..\Program Files\Oculus\Software\Software\another-axiom-gorilla-tag\Gorilla Tag_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 </Project>
