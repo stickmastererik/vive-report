@@ -1,4 +1,4 @@
-# Oculus Report Menu for PCVR ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/oatsalmon/vive-report/total)
+# Oculus Report Menu for PCVR ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/oatsalmon/OculusReportMenu/total)
 This basic mod lets you access the Oculus Report Menu on SteamVR and Oculus Rift / Quest Link. Activate using your left controller secondary button.
 
 ## Why?
@@ -10,4 +10,4 @@ This has never been avaliable to PCVR users, and it is super easy to implement i
 Press your secondary button on the left controller to open the menu. Close it with the "X" button at the top of the screen.
 
 ## Installation
-Look for the latest release, and download ``ViveReport.dll``. Drag this into your plugins folder, launch a game and press your left controller's secondary button. The report menu should now show up and work as it would on a Quest.
+Look for the latest release, and download ``OculusReportMenu.dll``. Drag this into your plugins folder, launch a game and press your left controller's secondary button. The report menu should now show up and work as it would on a Quest.
