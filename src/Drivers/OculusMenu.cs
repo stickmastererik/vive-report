@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Reflection;
 
-namespace ViveReport {
+namespace OculusReportMenu {
 	class Menus {
 		public static void OculusReportMenu()
 		{

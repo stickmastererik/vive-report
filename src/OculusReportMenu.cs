@@ -3,7 +3,7 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
-namespace ViveReport {
+namespace OculusReportMenu {
     [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "Oculus Report Menu", "1.1.0")]
     public class Plugin : BaseUnityPlugin
     {
@@ -42,8 +42,3 @@ namespace ViveReport {
         }
     }
 }
-
-/*
-Vector3 offset = new Vector3(0f, 0f, 0f);
-Vector3 targetPosition = LocalPlayerCameraObject.transform.position + LocalPlayerCameraObject.transform.TransformDirection(offset);
-*/
