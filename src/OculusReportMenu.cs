@@ -15,6 +15,7 @@ namespace OculusReportMenu {
         public void Update()
         {
             if (!ModEnabled) return;
+            if (Menu) GorillaLocomotion.Player.Instance.disableMovement = false;
 
             if (ControllerInputPoller.instance.leftControllerSecondaryButton)
             {
