@@ -28,6 +28,9 @@
 		<Reference Include="BepInEx">
 			<HintPath>$(BepInExAssemblyPath)\BepInEx.dll</HintPath>
 		</Reference>
+		<Reference Include="Unity.InputSystem">
+		  <HintPath>..\..\..\..\..\..\Program Files\Oculus\Software\Software\another-axiom-gorilla-tag\Gorilla Tag_Data\Managed\Unity.InputSystem.dll</HintPath>
+		</Reference>
 		<Reference Include="UnityEngine">
 			<HintPath>$(GameAssemblyPath)\UnityEngine.dll</HintPath>
 		</Reference>

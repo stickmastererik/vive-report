@@ -3,9 +3,10 @@ using HarmonyLib;
 using System;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace OculusReportMenu {
-    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "Oculus Report Menu", "1.1.0")]
+    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "OculusReportMenu", "1.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         static bool ModEnabled = true;
@@ -15,9 +16,14 @@ namespace OculusReportMenu {
         public void Update()
         {
             if (!ModEnabled) return;
-            if (Menu) GorillaLocomotion.Player.Instance.disableMovement = false;
+            if (Menu)
+            {
+                // hide the fact that they're in report menu to prevent comp cheating
+                GorillaLocomotion.Player.Instance.disableMovement = false;
+                GorillaLocomotion.Player.Instance.inOverlay = false;
+            }
 
-            if (ControllerInputPoller.instance.leftControllerSecondaryButton)
+            if (ControllerInputPoller.instance.leftControllerSecondaryButton || Keyboard.current.rightAltKey.wasPressedThisFrame)
             {
                 if (!Menu && Time.time >= debounceTime) // stop it from opening the menu a whole ton
                 {
