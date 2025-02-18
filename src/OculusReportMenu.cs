@@ -6,12 +6,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace OculusReportMenu {
-    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "OculusReportMenu", "1.1.0")]
+    [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "OculusReportMenu", "1.0.6")]
     public class Plugin : BaseUnityPlugin
     {
         static bool ModEnabled = true;
         public static bool Menu = false;
-        static float debounceTime = 0.0f;
 
         public void Update()
         {
@@ -25,11 +24,8 @@ namespace OculusReportMenu {
 
             if (ControllerInputPoller.instance.leftControllerSecondaryButton || Keyboard.current.rightAltKey.wasPressedThisFrame)
             {
-                if (!Menu && Time.time >= debounceTime) // stop it from opening the menu a whole ton
+                if (!Menu) // stop it from opening the menu a whole ton
                 {
-                    debounceTime = Time.time + 1; // for some reason, just opening it too fast after another thing makes it black out your game until you restart
-                                                  // this should hopefully fix that issue
-
                     GorillaMetaReport gr = GameObject.Find("Miscellaneous Scripts").transform.Find("MetaReporting").GetComponent<GorillaMetaReport>();
                     gr.gameObject.SetActive(true);
                     Menu = true;
@@ -37,6 +33,20 @@ namespace OculusReportMenu {
                     MethodInfo inf = typeof(GorillaMetaReport).GetMethod("StartOverlay", BindingFlags.NonPublic | BindingFlags.Instance);
                     inf.Invoke(gr, null);
                 }
+            }
+        }
+
+        public static void ShowMenu() {
+        // This was placed here for my Vive report patch, see here
+        // https://github.com/oatsalmon/vive-orm-patch
+            if (!Menu)
+            {
+                GorillaMetaReport gr = GameObject.Find("Miscellaneous Scripts").transform.Find("MetaReporting").GetComponent<GorillaMetaReport>();
+                gr.gameObject.SetActive(true);
+                Menu = true;
+                gr.enabled = true;
+                MethodInfo inf = typeof(GorillaMetaReport).GetMethod("StartOverlay", BindingFlags.NonPublic | BindingFlags.Instance);
+                inf.Invoke(gr, null);
             }
         }
 
