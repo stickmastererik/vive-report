@@ -3,6 +3,6 @@
 $MyInvocation.MyCommand.Path | Split-Path | Push-Location # Run from this script's directory
 $Name = (ls *.csproj).BaseName
 dotnet build -c Release
-cp bin\Release\netstandard2.0\OculusReportMenu.dll BepInEx\plugins\OculusReportMenu.dll
+cp bin\Release\netstandard2.1\OculusReportMenu.dll BepInEx\plugins\OculusReportMenu.dll
 Compress-Archive .\BepInEx\ $Name-v
 rmdir .\BepInEx\ -Recurse
