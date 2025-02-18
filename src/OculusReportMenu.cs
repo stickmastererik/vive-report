@@ -4,6 +4,7 @@ using System;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Management;
 
 namespace OculusReportMenu {
     [BepInPlugin("org.oatsalmon.gorillatag.oculusreportmenu", "OculusReportMenu", "1.0.6")]
@@ -11,6 +12,7 @@ namespace OculusReportMenu {
     {
         static bool ModEnabled = true;
         public static bool Menu = false;
+        public static bool NoSecondary = false;
 
         public void Update()
         {
@@ -22,7 +24,7 @@ namespace OculusReportMenu {
                 GorillaLocomotion.Player.Instance.inOverlay = false;
             }
 
-            if (ControllerInputPoller.instance.leftControllerSecondaryButton || Keyboard.current.rightAltKey.wasPressedThisFrame)
+            if ((ControllerInputPoller.instance.leftControllerSecondaryButton || (NoSecondary && ControllerInputPoller.instance.leftControllerPrimaryButton)) || Keyboard.current.rightAltKey.wasPressedThisFrame)
             {
                 if (!Menu) // stop it from opening the menu a whole ton
                 {
@@ -52,6 +54,21 @@ namespace OculusReportMenu {
 
         public void OnEnable() {
             HarmonyPatches.ApplyHarmonyPatches();
+
+            // check for HTC vive headset
+            var displaySubsystems = new List<XRDisplaySubsystem>();
+            SubsystemManager.GetInstances(displaySubsystems);
+        
+            XRDisplaySubsystem displaySubsystem = displaySubsystems[0];
+            Debug.Log("VR Headset detected by Unity: " + displaySubsystem.SubsystemDescriptor.id);
+
+            if (displaySubsystem.SubsystemDescriptor.id.Contains("HTC Vive")) {
+                NoSecondary = true;
+            } else {
+                NoSecondary = false;
+            }
+
+            // enable
             ModEnabled = true;
         }
         
