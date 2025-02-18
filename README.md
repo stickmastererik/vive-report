@@ -18,6 +18,8 @@ This has never been avaliable to PCVR users, and it is super easy to implement i
 Press your secondary button on the left controller to open the menu. Close it with the "X" button at the top of the screen.
 
 # Headsets
+For any headset that does not have a secondary left button, you can use the Alt key to open the menu on your keyboard.
+
 | Headset | Keybind |
 |---------|---------|
 | Oculus Quest 1/2/3S/3/Pro | Left Controller "Y" |
@@ -25,3 +27,5 @@ Press your secondary button on the left controller to open the menu. Close it wi
 | Oculus Rift S | Left Controller "Y" |
 | HP Reverb G2 | Left Controller "Y" |
 | Valve Index | Left Controller "Y" |
+| HTC Vive PCVR | Alt key (Keyboard) |
+| HTC Vive Standalone | Alt key (Keyboard) |
