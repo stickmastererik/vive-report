@@ -1,7 +1,5 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
 /.vs
-/src/bin/Debug/netstandard2.1
-/src/obj
+/src/bin/
+
+# dlls
+*.dll
